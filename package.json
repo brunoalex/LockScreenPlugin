@@ -1,0 +1,16 @@
+{
+  "name": "cordova-plugin-lockscreen",
+  "version": "1.0.0",
+  "description": "A Cordova plugin to lock the screen using Android's Device Administration API",
+  "cordova": {
+    "id": "cordova-plugin-lockscreen",
+    "platforms": ["android"]
+  },
+  "keywords": [
+    "cordova",
+    "lockscreen",
+    "device admin"
+  ],
+  "author": "Your Name",
+  "license": "ISC"
+}

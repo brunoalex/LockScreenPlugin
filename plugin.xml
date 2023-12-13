@@ -1,0 +1,17 @@
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-lockscreen" version="1.0.0">
+    <name>LockScreenPlugin</name>
+   <js-module src="www/lockscreen.js" name="LockScreenPlugin">
+    <clobbers target="LockScreenPlugin" />
+</js-module>
+    <platform name="android">
+       
+       <feature name="LockScreenPlugin">
+    <param name="android-package" value="org.apache.cordova.lockscreen.LockScreenPlugin" />
+</feature>
+
+        <resource-file src="res/xml/device_admin_receiver.xml" target="app/src/main/res/xml/device_admin_receiver.xml" />
+       
+        <source-file src="src/android/LockScreenPlugin.java" target-dir="org/apache/cordova/lockscreen" />
+
+    </platform>
+</plugin>
