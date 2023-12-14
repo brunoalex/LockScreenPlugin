@@ -4,7 +4,19 @@
     <clobbers target="LockScreenPlugin" />
 </js-module>
     <platform name="android">
-       
+   <config-file target="AndroidManifest.xml" parent="/manifest/application">
+    <receiver android:name="android.app.admin.DeviceAdminReceiver"
+              android:permission="android.permission.BIND_DEVICE_ADMIN"
+              android:exported="true"> <!-- Add this line -->
+        <meta-data android:name="android.app.device_admin"
+                   android:resource="@xml/device_admin_receiver" />
+        <intent-filter>
+            <action android:name="android.app.action.DEVICE_ADMIN_ENABLED" />
+        </intent-filter>
+    </receiver>
+</config-file>
+
+
        <feature name="LockScreenPlugin">
     <param name="android-package" value="org.apache.cordova.lockscreen.LockScreenPlugin" />
 </feature>
