@@ -3,12 +3,14 @@ import org.apache.cordova.CallbackContext;
 import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
-
+import android.util.Log;  // Add this line
 import android.app.admin.DevicePolicyManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.app.admin.DeviceAdminReceiver; // Import the DeviceAdminReceiver class
+
+
 
 public class LockScreenPlugin extends CordovaPlugin {
 
@@ -24,6 +26,7 @@ public class LockScreenPlugin extends CordovaPlugin {
 
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
+         Log.d("LockScreenPlugin", "execute method called with action: " + action);
         if ("lock".equals(action)) {
             if (!devicePolicyManager.isAdminActive(deviceAdmin)) {
                 Intent intent = new Intent(DevicePolicyManager.ACTION_ADD_DEVICE_ADMIN);
