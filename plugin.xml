@@ -1,5 +1,5 @@
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" id="cordova-plugin-lockscreen" version="1.0.0">
-     <name>LockScreenPlugin</name>
+       <plugin name="cordova-plugin-lockscreen" spec="1.0.0" />
     <js-module src="www/lockscreen.js" name="LockScreenPlugin">
         <clobbers target="LockScreenPlugin" />
     </js-module>
