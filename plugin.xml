@@ -15,7 +15,14 @@
         </intent-filter>
     </receiver>
 </config-file>
-
+        
+<platform name="android">
+    <config-file target="res/xml/config.xml" parent="/*">
+        <feature name="LockScreenPlugin">
+            <param name="android-package" value="org.apache.cordova.lockscreen.LockScreenPlugin" />
+        </feature>
+    </config-file>
+</platform>
 
        <feature name="LockScreenPlugin">
     <param name="android-package" value="org.apache.cordova.lockscreen.LockScreenPlugin" />
