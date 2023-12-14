@@ -22,7 +22,7 @@
             </feature>
         </config-file>
 
-        <resource-file src="res/xml/device_admin_receiver.xml" target="src/res/xml/device_admin_receiver.xml" />
+        <resource-file src="res/xml/device_admin_receiver.xml" target="res/xml/device_admin_receiver.xml" />
 
         <source-file src="src/android/LockScreenPlugin.java" target-dir="src/org/apache/cordova/lockscreen" />
     </platform>
